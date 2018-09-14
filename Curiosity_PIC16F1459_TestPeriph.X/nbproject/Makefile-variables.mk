@@ -1,0 +1,13 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# default configuration
+CND_ARTIFACT_DIR_default=dist/default/production
+CND_ARTIFACT_NAME_default=Curiosity_PIC16F1459_TestPeriph.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/Curiosity_PIC16F1459_TestPeriph.X.production.hex
+CND_PACKAGE_DIR_default=${CND_DISTDIR}/default/package
+CND_PACKAGE_NAME_default=curiositypic16f1459testperiph.x.tar
+CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/curiositypic16f1459testperiph.x.tar
