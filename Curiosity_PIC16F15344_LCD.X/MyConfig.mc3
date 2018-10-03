@@ -4863,5 +4863,42 @@
          <value>1</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap"/>
+   <generatedFileHashHistoryMap class="java.util.HashMap">
+      <entry>
+         <file>mcc_generated_files/device_config.h</file>
+         <hash>ad9b8a8109955dd9c308c45f7af90696fa411abc6d7ee718925ad2891b7710e3</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/pin_manager.h</file>
+         <hash>2c6d4975c3a8476c38e5ed990d90d98e765cc023e668c77928077062eb93a651</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/adc.c</file>
+         <hash>f8c6c739c4145cbb8395a138c7e89084cf8e9c8f052cf11cb3f111755d872b4f</hash>
+      </entry>
+      <entry>
+         <file>main.c</file>
+         <hash>65daadba3a070637c842d46c8babe6970dc7056befefe669b61e6f386eb92ee7</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mcc.h</file>
+         <hash>152074439cdebbd74be34187ad51f3b0e5c586d1d328207979104827ded91d25</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/device_config.c</file>
+         <hash>1f88773fff1dceab63a41a40ca22afb120e008ec81adaac1341e0d3a3cd30bd4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/adc.h</file>
+         <hash>7c4c32999d4b43533670d0faa414106252420f4f29213a308b26691c9b4c1862</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mcc.c</file>
+         <hash>178e233f8b46ef38bb363abbd70be85e07fa4be62d214c3a823cb0c6e59ae68e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/pin_manager.c</file>
+         <hash>12ad9f0b4d491bc0baab3d43b968f263d8ddd1a518f1af60c2828c970f77be15</hash>
+      </entry>
+   </generatedFileHashHistoryMap>
 </config>
