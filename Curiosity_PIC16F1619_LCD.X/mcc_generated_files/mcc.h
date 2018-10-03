@@ -51,6 +51,7 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include "tmr0.h"
 #include "adc.h"
 
 
