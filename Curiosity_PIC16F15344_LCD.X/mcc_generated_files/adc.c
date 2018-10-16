@@ -68,8 +68,8 @@ void ADC_Initialize(void)
     // GOnDONE stop; ADON enabled; CHS ANA0; 
     ADCON0 = 0x01;
     
-    // ADFM left; ADPREF VDD; ADCS Frc; 
-    ADCON1 = 0x70;
+    // ADFM right; ADPREF FVR; ADCS Frc; 
+    ADCON1 = 0xF3;
     
     // ADACT disabled; 
     ADACT = 0x00;
