@@ -65,6 +65,63 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set GPIO_LED_D5 aliases
+#define GPIO_LED_D5_TRIS                 TRISAbits.TRISA1
+#define GPIO_LED_D5_LAT                  LATAbits.LATA1
+#define GPIO_LED_D5_PORT                 PORTAbits.RA1
+#define GPIO_LED_D5_WPU                  WPUAbits.WPUA1
+#define GPIO_LED_D5_OD                   ODCONAbits.ODA1
+#define GPIO_LED_D5_ANS                  ANSELAbits.ANSA1
+#define GPIO_LED_D5_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
+#define GPIO_LED_D5_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
+#define GPIO_LED_D5_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
+#define GPIO_LED_D5_GetValue()           PORTAbits.RA1
+#define GPIO_LED_D5_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
+#define GPIO_LED_D5_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
+#define GPIO_LED_D5_SetPullup()          do { WPUAbits.WPUA1 = 1; } while(0)
+#define GPIO_LED_D5_ResetPullup()        do { WPUAbits.WPUA1 = 0; } while(0)
+#define GPIO_LED_D5_SetPushPull()        do { ODCONAbits.ODA1 = 0; } while(0)
+#define GPIO_LED_D5_SetOpenDrain()       do { ODCONAbits.ODA1 = 1; } while(0)
+#define GPIO_LED_D5_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
+#define GPIO_LED_D5_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
+
+// get/set GPIO_LED_D6 aliases
+#define GPIO_LED_D6_TRIS                 TRISAbits.TRISA2
+#define GPIO_LED_D6_LAT                  LATAbits.LATA2
+#define GPIO_LED_D6_PORT                 PORTAbits.RA2
+#define GPIO_LED_D6_WPU                  WPUAbits.WPUA2
+#define GPIO_LED_D6_OD                   ODCONAbits.ODA2
+#define GPIO_LED_D6_ANS                  ANSELAbits.ANSA2
+#define GPIO_LED_D6_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define GPIO_LED_D6_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define GPIO_LED_D6_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define GPIO_LED_D6_GetValue()           PORTAbits.RA2
+#define GPIO_LED_D6_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define GPIO_LED_D6_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define GPIO_LED_D6_SetPullup()          do { WPUAbits.WPUA2 = 1; } while(0)
+#define GPIO_LED_D6_ResetPullup()        do { WPUAbits.WPUA2 = 0; } while(0)
+#define GPIO_LED_D6_SetPushPull()        do { ODCONAbits.ODA2 = 0; } while(0)
+#define GPIO_LED_D6_SetOpenDrain()       do { ODCONAbits.ODA2 = 1; } while(0)
+#define GPIO_LED_D6_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
+#define GPIO_LED_D6_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
+
+// get/set GPIO_LED_D4 aliases
+#define GPIO_LED_D4_TRIS                 TRISAbits.TRISA5
+#define GPIO_LED_D4_LAT                  LATAbits.LATA5
+#define GPIO_LED_D4_PORT                 PORTAbits.RA5
+#define GPIO_LED_D4_WPU                  WPUAbits.WPUA5
+#define GPIO_LED_D4_OD                   ODCONAbits.ODA5
+#define GPIO_LED_D4_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define GPIO_LED_D4_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define GPIO_LED_D4_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define GPIO_LED_D4_GetValue()           PORTAbits.RA5
+#define GPIO_LED_D4_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define GPIO_LED_D4_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define GPIO_LED_D4_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
+#define GPIO_LED_D4_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
+#define GPIO_LED_D4_SetPushPull()        do { ODCONAbits.ODA5 = 0; } while(0)
+#define GPIO_LED_D4_SetOpenDrain()       do { ODCONAbits.ODA5 = 1; } while(0)
+
 // get/set RB4 procedures
 #define RB4_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
 #define RB4_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
@@ -86,6 +143,40 @@
 #define RB6_SetDigitalOutput()   do { TRISBbits.TRISB6 = 0; } while(0)
 #define RB6_SetPullup()             do { WPUBbits.WPUB6 = 1; } while(0)
 #define RB6_ResetPullup()           do { WPUBbits.WPUB6 = 0; } while(0)
+
+// get/set GPIO_SW1 aliases
+#define GPIO_SW1_TRIS                 TRISCbits.TRISC4
+#define GPIO_SW1_LAT                  LATCbits.LATC4
+#define GPIO_SW1_PORT                 PORTCbits.RC4
+#define GPIO_SW1_WPU                  WPUCbits.WPUC4
+#define GPIO_SW1_OD                   ODCONCbits.ODC4
+#define GPIO_SW1_SetHigh()            do { LATCbits.LATC4 = 1; } while(0)
+#define GPIO_SW1_SetLow()             do { LATCbits.LATC4 = 0; } while(0)
+#define GPIO_SW1_Toggle()             do { LATCbits.LATC4 = ~LATCbits.LATC4; } while(0)
+#define GPIO_SW1_GetValue()           PORTCbits.RC4
+#define GPIO_SW1_SetDigitalInput()    do { TRISCbits.TRISC4 = 1; } while(0)
+#define GPIO_SW1_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
+#define GPIO_SW1_SetPullup()          do { WPUCbits.WPUC4 = 1; } while(0)
+#define GPIO_SW1_ResetPullup()        do { WPUCbits.WPUC4 = 0; } while(0)
+#define GPIO_SW1_SetPushPull()        do { ODCONCbits.ODC4 = 0; } while(0)
+#define GPIO_SW1_SetOpenDrain()       do { ODCONCbits.ODC4 = 1; } while(0)
+
+// get/set GPIO_LED_D7 aliases
+#define GPIO_LED_D7_TRIS                 TRISCbits.TRISC5
+#define GPIO_LED_D7_LAT                  LATCbits.LATC5
+#define GPIO_LED_D7_PORT                 PORTCbits.RC5
+#define GPIO_LED_D7_WPU                  WPUCbits.WPUC5
+#define GPIO_LED_D7_OD                   ODCONCbits.ODC5
+#define GPIO_LED_D7_SetHigh()            do { LATCbits.LATC5 = 1; } while(0)
+#define GPIO_LED_D7_SetLow()             do { LATCbits.LATC5 = 0; } while(0)
+#define GPIO_LED_D7_Toggle()             do { LATCbits.LATC5 = ~LATCbits.LATC5; } while(0)
+#define GPIO_LED_D7_GetValue()           PORTCbits.RC5
+#define GPIO_LED_D7_SetDigitalInput()    do { TRISCbits.TRISC5 = 1; } while(0)
+#define GPIO_LED_D7_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
+#define GPIO_LED_D7_SetPullup()          do { WPUCbits.WPUC5 = 1; } while(0)
+#define GPIO_LED_D7_ResetPullup()        do { WPUCbits.WPUC5 = 0; } while(0)
+#define GPIO_LED_D7_SetPushPull()        do { ODCONCbits.ODC5 = 0; } while(0)
+#define GPIO_LED_D7_SetOpenDrain()       do { ODCONCbits.ODC5 = 1; } while(0)
 
 /**
    @Param
