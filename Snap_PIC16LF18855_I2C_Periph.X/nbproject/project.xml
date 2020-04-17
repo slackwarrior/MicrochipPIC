@@ -6,9 +6,9 @@
             <name>Snap_PIC16LF18855_I2C_Periph</name>
             <creation-uuid>8b790ae5-1044-478f-855e-1ede162020af</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-2</sourceEncoding>
             <make-dep-projects/>
