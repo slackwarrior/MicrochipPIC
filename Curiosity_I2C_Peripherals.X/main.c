@@ -42,6 +42,9 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/examples/i2c_master_example.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /*
                          Main application
@@ -66,9 +69,12 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
+    
     while (1)
     {
         // Add your application code
+        I2C_Write1ByteRegister();
+        delay(1000);
         
     }
 }
