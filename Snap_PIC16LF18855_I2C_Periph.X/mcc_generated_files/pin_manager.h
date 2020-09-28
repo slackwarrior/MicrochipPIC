@@ -89,6 +89,26 @@
 #define RC4_SetAnalogMode()         do { ANSELCbits.ANSC4 = 1; } while(0)
 #define RC4_SetDigitalMode()        do { ANSELCbits.ANSC4 = 0; } while(0)
 
+// get/set GPIO_LED_DOT aliases
+#define GPIO_LED_DOT_TRIS                 TRISCbits.TRISC7
+#define GPIO_LED_DOT_LAT                  LATCbits.LATC7
+#define GPIO_LED_DOT_PORT                 PORTCbits.RC7
+#define GPIO_LED_DOT_WPU                  WPUCbits.WPUC7
+#define GPIO_LED_DOT_OD                   ODCONCbits.ODCC7
+#define GPIO_LED_DOT_ANS                  ANSELCbits.ANSC7
+#define GPIO_LED_DOT_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define GPIO_LED_DOT_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define GPIO_LED_DOT_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define GPIO_LED_DOT_GetValue()           PORTCbits.RC7
+#define GPIO_LED_DOT_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define GPIO_LED_DOT_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define GPIO_LED_DOT_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define GPIO_LED_DOT_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define GPIO_LED_DOT_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
+#define GPIO_LED_DOT_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
+#define GPIO_LED_DOT_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
+#define GPIO_LED_DOT_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
+
 /**
    @Param
     none

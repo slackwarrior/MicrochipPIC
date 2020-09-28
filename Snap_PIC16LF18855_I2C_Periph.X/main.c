@@ -42,6 +42,9 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/examples/i2c1_master_example.h"
+
+unsigned char i2c_buff[20];
 
 /*
                          Main application
@@ -55,20 +58,25 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    
+    i2c_buff[0] = 0x00;
     while (1)
     {
         // Add your application code
+        I2C1_WriteNBytes(0x40, &i2c_buff[0],1);
+        GPIO_LED_DOT_SetHigh();
+        while (1)
+            ;
     }
 }
 /**
