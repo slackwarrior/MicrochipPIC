@@ -65,6 +65,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set LED_OUT aliases
+#define LED_OUT_TRIS                 TRISAbits.TRISA0
+#define LED_OUT_LAT                  LATAbits.LATA0
+#define LED_OUT_PORT                 PORTAbits.RA0
+#define LED_OUT_WPU                  WPUAbits.WPUA0
+#define LED_OUT_OD                   ODCONAbits.ODCA0
+#define LED_OUT_ANS                  ANSELAbits.ANSA0
+#define LED_OUT_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define LED_OUT_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define LED_OUT_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define LED_OUT_GetValue()           PORTAbits.RA0
+#define LED_OUT_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define LED_OUT_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define LED_OUT_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
+#define LED_OUT_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
+#define LED_OUT_SetPushPull()        do { ODCONAbits.ODCA0 = 0; } while(0)
+#define LED_OUT_SetOpenDrain()       do { ODCONAbits.ODCA0 = 1; } while(0)
+#define LED_OUT_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
+#define LED_OUT_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
+
 // get/set RC3 procedures
 #define RC3_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
 #define RC3_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
@@ -89,25 +109,29 @@
 #define RC4_SetAnalogMode()         do { ANSELCbits.ANSC4 = 1; } while(0)
 #define RC4_SetDigitalMode()        do { ANSELCbits.ANSC4 = 0; } while(0)
 
-// get/set GPIO_LED_DOT aliases
-#define GPIO_LED_DOT_TRIS                 TRISCbits.TRISC7
-#define GPIO_LED_DOT_LAT                  LATCbits.LATC7
-#define GPIO_LED_DOT_PORT                 PORTCbits.RC7
-#define GPIO_LED_DOT_WPU                  WPUCbits.WPUC7
-#define GPIO_LED_DOT_OD                   ODCONCbits.ODCC7
-#define GPIO_LED_DOT_ANS                  ANSELCbits.ANSC7
-#define GPIO_LED_DOT_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
-#define GPIO_LED_DOT_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
-#define GPIO_LED_DOT_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
-#define GPIO_LED_DOT_GetValue()           PORTCbits.RC7
-#define GPIO_LED_DOT_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
-#define GPIO_LED_DOT_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
-#define GPIO_LED_DOT_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
-#define GPIO_LED_DOT_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
-#define GPIO_LED_DOT_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
-#define GPIO_LED_DOT_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
-#define GPIO_LED_DOT_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
-#define GPIO_LED_DOT_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
+// get/set RC5 procedures
+#define RC5_SetHigh()            do { LATCbits.LATC5 = 1; } while(0)
+#define RC5_SetLow()             do { LATCbits.LATC5 = 0; } while(0)
+#define RC5_Toggle()             do { LATCbits.LATC5 = ~LATCbits.LATC5; } while(0)
+#define RC5_GetValue()              PORTCbits.RC5
+#define RC5_SetDigitalInput()    do { TRISCbits.TRISC5 = 1; } while(0)
+#define RC5_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
+#define RC5_SetPullup()             do { WPUCbits.WPUC5 = 1; } while(0)
+#define RC5_ResetPullup()           do { WPUCbits.WPUC5 = 0; } while(0)
+#define RC5_SetAnalogMode()         do { ANSELCbits.ANSC5 = 1; } while(0)
+#define RC5_SetDigitalMode()        do { ANSELCbits.ANSC5 = 0; } while(0)
+
+// get/set RC6 procedures
+#define RC6_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)
+#define RC6_SetLow()             do { LATCbits.LATC6 = 0; } while(0)
+#define RC6_Toggle()             do { LATCbits.LATC6 = ~LATCbits.LATC6; } while(0)
+#define RC6_GetValue()              PORTCbits.RC6
+#define RC6_SetDigitalInput()    do { TRISCbits.TRISC6 = 1; } while(0)
+#define RC6_SetDigitalOutput()   do { TRISCbits.TRISC6 = 0; } while(0)
+#define RC6_SetPullup()             do { WPUCbits.WPUC6 = 1; } while(0)
+#define RC6_ResetPullup()           do { WPUCbits.WPUC6 = 0; } while(0)
+#define RC6_SetAnalogMode()         do { ANSELCbits.ANSC6 = 1; } while(0)
+#define RC6_SetDigitalMode()        do { ANSELCbits.ANSC6 = 0; } while(0)
 
 /**
    @Param

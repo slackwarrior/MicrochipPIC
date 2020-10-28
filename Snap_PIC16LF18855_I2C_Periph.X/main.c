@@ -16,7 +16,7 @@
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.0
         Device            :  PIC16LF18855
         Driver Version    :  2.00
-*/
+ */
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -39,18 +39,28 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
-*/
+ */
 
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/examples/i2c1_master_example.h"
 
+#define I2C_EXPANDER_2_WRITE_ADDR 0x40
+#define I2C_EXPANDER_2_READ_ADDR 0x41
+
+#define I2C_EXPANDER_1_WRITE_ADDR 0x70
+#define I2C_EXPANDER_1_READ_ADDR 0x71
+
 unsigned char i2c_buff[20];
+unsigned long int tmr0_soft_prescaler = 0;
+
+void tmr0_custom_ISR() {
+    tmr0_soft_prescaler++;
+}
 
 /*
                          Main application
  */
-void main(void)
-{
+void main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
@@ -68,17 +78,24 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    i2c_buff[0] = 0x00;
-    while (1)
-    {
+
+
+    // I2C1_Write1ByteRegister(I2C_EXPANDER_1_WRITE_ADDR, 0x01, 0x01);
+    while (1) {
         // Add your application code
-        I2C1_WriteNBytes(0x40, &i2c_buff[0],1);
-        GPIO_LED_DOT_SetHigh();
-        while (1)
-            ;
+        // I2C1_WriteNBytes(0x40, &i2c_buff[0],1);
+        // LED_OUT_SetLow();
+        if (tmr0_soft_prescaler == 5000) {
+            tmr0_soft_prescaler = 0;
+            
+            //LED_OUT_SetLow();
+            // TMR0_SetInterruptHandler(tmr0_custom_ISR);
+            LED_OUT_Toggle();
+        }
+
+        // if ()
     }
 }
 /**
  End of File
-*/
+ */
